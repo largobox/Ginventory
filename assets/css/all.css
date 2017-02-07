@@ -60,7 +60,8 @@
   z-index: -1;
   width: 100%;
   height: 100%;
-  position: fixed; }
+  position: fixed;
+  background-color: #f6f6f4; }
 
 .bottle {
   z-index: -1;
@@ -78,14 +79,14 @@
 
 .branch {
   height: 100%;
-  width: 320px;
+  width: 280px;
   position: absolute;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: top center;
   -webkit-transition: 2s ease;
   transition: 2s ease;
-  opacity: .2;
+  opacity: .15;
   z-index: -2; }
 
 .branch_1 {
@@ -94,8 +95,8 @@
   background-image: url(../img/illustrations/ginventory-illu-branch-02.png); }
 
 .branch_2 {
-  top: 200px;
-  left: calc(50% + 20px);
+  top: 160px;
+  left: calc(50% - 30px);
   background-image: url(../img/illustrations/ginventory-illu-branch-01.png); }
 
 .branch_3 {
@@ -103,11 +104,11 @@
   -webkit-transform: rotate(-90deg);
           transform: rotate(-90deg);
   top: 0px;
-  left: calc(50% - 260px); }
+  left: calc(50% - 160px); }
 
 .branch_4 {
-  top: -510px;
-  left: calc(50% + 0px);
+  top: -550px;
+  left: calc(50% + 40px);
   background-image: url(../img/illustrations/ginventory-illu-branch-01.png);
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg); }
@@ -116,7 +117,7 @@
   width: 120px;
   height: 120px;
   top: 550px;
-  left: calc(50% - 480px);
+  left: calc(50% - 380px);
   background-image: url(../img/illustrations/ginventory-illu-leaf-01.png); }
 
 .leaf_2 {
@@ -124,6 +125,81 @@
   top: 560px;
   left: calc(50% + 100px);
   background-image: url(../img/illustrations/ginventory-illu-leaf-02.png); }
+
+.content_cnt {
+  overflow: hidden;
+  position: relative;
+  top: 15px;
+  left: 15px;
+  width: calc(100% - 30px);
+  height: calc(100% - 30px);
+  -webkit-transition: 2s ease;
+  transition: 2s ease; }
+
+.nav {
+  position: absolute;
+  right: 0px; }
+  .nav li {
+    vertical-align: top;
+    display: inline-block;
+    height: 55px;
+    width: 160px;
+    background-color: #f6cc4c;
+    background-repeat: no-repeat;
+    background-position: center; }
+  .nav li:nth-child(1) {
+    margin-right: 20px;
+    width: 70px;
+    background-color: transparent; }
+  .nav a {
+    display: block;
+    height: 100%;
+    width: 100%;
+    font-size: 14px;
+    font-style: italic;
+    color: rgba(60, 59, 54, 0.7);
+    line-height: 55px;
+    letter-spacing: 0.5px; }
+
+.app_store {
+  background-image: url(../img/icons/download-btn.png); }
+
+.google_play {
+  background-image: url(../img/icons/download-btn-android.png); }
+
+.main_capton h1 {
+  color: #f6cc4c;
+  font-size: 420%;
+  text-transform: uppercase;
+  letter-spacing: 40px;
+  text-align: center;
+  line-height: calc(100vh - 110px);
+  -webkit-transition: 2s ease;
+  transition: 2s ease; }
+
+.quotes_cnt {
+  width: 152px;
+  text-align: center;
+  position: absolute;
+  bottom: 20px;
+  left: calc(50% - 152px); }
+  .quotes_cnt h3 {
+    color: rgba(60, 59, 54, 0.7);
+    font-weight: normal;
+    font-style: italic;
+    font-size: 16px; }
+  .quotes_cnt p {
+    letter-spacing: 1px;
+    color: #f6cc4c;
+    font-size: 14px;
+    text-transform: uppercase; }
+
+.stage_bg {
+  position: absolute;
+  bottom: calc((100vh - 110px)/-2 + 16px);
+  background-color: #f6cc4c;
+  width: 100%;
+  height: calc((100vh - 110px)/2); }
 
 body {
   font-family: 'PT_Sans'; }
@@ -137,3 +213,7 @@ div {
 
 ul {
   list-style-type: none; }
+
+html, body, main {
+  height: 100%;
+  width: 100%; }
