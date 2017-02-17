@@ -1,0 +1,169 @@
+.swapper_bg
+	z-index: -1
+	position: absolute
+	top: calc(-100vh - 55px)
+	left: -50vw
+	width: 200vw
+	height: 300vh
+	transition: 2s ease
+	transform: translate(0px, calc(50vh + 15px))
+
+.fill_part
+	height: 150vh
+	background-color: $bg_color
+
+.transparent_part	
+	height: 150vh
+
+.phone_cnt
+	transform: rotate(-90deg)
+	position: absolute
+	z-index: 2
+	top: 100vh
+	left: calc(50vw - (150px + 55px + 5px)
+	background-image: url(../img/iPhone.png)
+	background-size: contain
+	background-repeat: no-repeat
+	background-position: center
+	width: 300px
+	height: calc(100vh - 110px)
+	transition: 2s ease
+
+.swapper_front
+	text-align: right
+	opacity: 0
+	transition: 2s ease
+	position: absolute
+	left: calc(50vw - 55px - 50px)
+	top: 50vh 
+	font-size: 800%
+	font-style: italic
+	color: #fafafa
+	width: 150px
+
+.swapper_desc
+	text-align: right
+	opacity: 0
+	transition: 2s ease
+	position: absolute
+	left: calc(50vw - 55px - 50px)
+	top: calc(50vh - 55px - 3*80px)
+	width: 150px
+	height: 160px
+	padding-top: 50px
+
+	h2
+		color: $bg_color
+		text-transform: uppercase
+		font-weight: bold
+		font-size: 150%
+		letter-spacing: 2px
+		margin-bottom: 10px	
+
+	p
+		font-size: 90%
+		font-style: italic
+		color: rgba(0,0,0, .85)
+
+.decor_line
+	position: relative
+	top: -76px
+	left: 58px
+	width: 550px
+	height: 1px
+	background-color: rgba(255,255,255, .35)
+
+.decor_line_bold
+	background-color: rgba(255,255,255, 1)
+	width: 100px
+	height: 1px
+
+.decor_circle
+	top: -11px
+	left: -11px
+	width: 22px
+	height: 22px
+	position: absolute
+	border-radius: 50%
+	animation: circle_life 2s ease infinite
+
+.final_bg
+	transition: 2s ease
+	background-image: url(../img/illustrations/ginventory-illu-branch-01-big.png)
+	background-size: contain
+	background-repeat: no-repeat
+	background-position: center
+	transform: scale(0.8)
+	z-index: -1
+	opacity: 0
+	position: absolute
+	width: 100%
+	height: 100%
+
+.download_cnt
+	transition: 2s ease
+	opacity: 0
+	text-align: center
+	position: absolute
+	left: calc(50vw - 165px - 5px)
+	bottom: 55px
+	width: 330px
+
+	p
+		font-style: italic
+		font-size: 90%
+		letter-spacing: 1px
+		font-weight: 300
+
+.divide_line
+	margin: 14px auto
+	height: 40px
+	background-color: rgba(0,0,0, .7)
+	width: 1px
+
+.final_links_cnt
+	margin-bottom: 32px
+	
+	a
+		display: block
+		width: 120px
+		height: 26px
+		background-size: contain
+		background-repeat: no-repeat
+		background-position: center
+
+	li
+		display: inline-block
+		background-color: black
+		padding: 12px
+
+	li:nth-child(1)
+		margin-right: 2px
+
+	li:nth-child(2)
+		margin-left: 2px
+
+.share_cnt
+	margin-bottom: 20px
+
+	span
+		vertical-align: top
+		line-height: 25px
+		text-transform: uppercase
+		font-size: 86%
+		color: white
+		letter-spacing: 2px
+		margin-right: 10px
+
+.share_pic
+	display: inline-block
+	width: 25px
+	height: 25px
+	background-image: url(../img/icons/icons-sprite.png)
+	background-repeat: no-repeat
+
+.fb
+	background-position: center -93px
+	
+.tw
+	background-position: center -62px
