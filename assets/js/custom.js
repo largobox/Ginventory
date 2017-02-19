@@ -2,6 +2,7 @@ $(function() {
 	nextState()
 	prevState()
 	mouseWhellHappened(0)
+	browserFixes()
 });
 
 var swapper_front = $('.swapper_front'),
@@ -11,7 +12,28 @@ var swapper_front = $('.swapper_front'),
 		swapper_desc_h2 = $('.swapper_desc h2'),
 		swapper_desc_p = $('.swapper_desc p'),
 		arrStates = [0, 1, 2, 3, 4, 5],
-		currentStateNumber = 0
+		currentStateNumber = 0,
+		video = $('#video')[0],
+		isFirefox = typeof InstallTrigger !== 'undefined',
+		isChrome = !!window.chrome && !!window.chrome.webstore
+
+function browserFixes(){
+	if(isFirefox){
+		$('.phone_cap').css({
+			'display': 'block'
+		})
+	}
+}
+
+function videoContol(stateTime){
+	video.currentTime = stateTime
+	video.play()
+}
+
+function changeActiveEl(number){
+	$('.border_el_active').removeClass('border_el_active')
+	$('.state_' + number).addClass('border_el_active')
+}
 
 function changeState(state){
 	switch(state) {
@@ -67,8 +89,8 @@ function toggleState(step){
 function mouseWhellHappened(delay){
 	setTimeout(function(){
 
-	$(window).on('mousewheel DOMMouseScroll', function(e){
-		var currentST = e.originalEvent.wheelDelta/120
+	$(window).on('mousewheel', function(e){
+		var currentST = e.originalEvent.wheelDelta
 		if (currentST > 0) {
 			toggleState(-1)
 		}
@@ -76,6 +98,16 @@ function mouseWhellHappened(delay){
 			toggleState(1)
 		}
 	})
+
+	$(window).on('DOMMouseScroll', function(e){
+		var currentST = e.originalEvent.detail
+		if (currentST < 0) {
+			toggleState(-1)
+		}
+		else {
+			toggleState(1)
+		}
+	})	
 
 	}, delay)
 }
@@ -261,7 +293,7 @@ function state1(){
 		})
 
 		$('.phone_cnt').css({
-			'top': '0px',
+			'top': 'calc((100vh - 110px)/2 - 250px)',
 			'transform': 'rotate(0deg)'
 		})
 
@@ -332,9 +364,13 @@ function state1(){
 		$('.ar_next').css({
 			'transform': 'translate(0px, 0px)'
 		})
+
+		videoContol(0)
+		changeActiveEl(1)
 }
 
 function state2(){
+
 		swapper_bg.css({
 			'transform': 'translate(0px, -40px) rotate(180deg)'
 		})
@@ -365,7 +401,10 @@ function state2(){
 				'opacity': '1',
 				'transform': 'translate(-250px, 0px)'
 			})
-		}, 1500)	
+		}, 1500)
+
+		videoContol(11)
+		changeActiveEl(2)
 }
 
 function state3(){
@@ -399,7 +438,10 @@ function state3(){
 				'opacity': '1',
 				'transform': 'translate(-250px, 0px)'
 			})
-		}, 1500)	
+		}, 1500)
+
+		videoContol(23)
+		changeActiveEl(3)
 }
 
 function state4(){
@@ -437,7 +479,7 @@ function state4(){
 		}, 1500)	
 
 		$('.phone_cnt').css({
-			'top': '0',
+			'top': 'calc((100vh - 110px)/2 - 250px)',
 			'transform': 'rotate(0deg)'
 		})
 
@@ -462,6 +504,13 @@ function state4(){
 		$('.download_cnt').css({
 			'opacity': '0'
 		})
+
+		$('.ar_next').css({
+			'display': 'block'
+		})
+
+		videoContol(27.5)
+		changeActiveEl(4)
 }
 
 function state5(){
@@ -509,4 +558,10 @@ function state5(){
 		$('.download_cnt').css({
 			'opacity': '1'
 		})
+
+		$('.ar_next').css({
+			'display': 'none'
+		})
+
+		changeActiveEl(5)
 }

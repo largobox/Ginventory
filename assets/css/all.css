@@ -141,7 +141,7 @@
           transform: translate(900px, 0px); }
 
 .border_nav_divider {
-  width: 10px;
+  width: 9px;
   height: 1px;
   margin: auto;
   background-color: rgba(0, 0, 0, 0.25);
@@ -273,15 +273,26 @@
   position: absolute;
   z-index: 2;
   top: 100vh;
-  left: calc(50vw - (150px + 55px + 5px));
+  left: calc(50vw - 125px - 55px);
   background-image: url(../img/iPhone.png);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  width: 300px;
-  height: calc(100vh - 110px);
+  width: 250px;
+  height: 500px;
   -webkit-transition: 2s ease;
   transition: 2s ease; }
+
+.phone_cap {
+  display: none;
+  position: relative;
+  top: -223px;
+  left: 38px;
+  z-index: 3;
+  width: 175px;
+  height: 314px;
+  background-image: url(../img/ginventory-screenshot-search.jpg);
+  background-size: contain; }
 
 .swapper_front {
   text-align: right;
@@ -420,6 +431,14 @@
 .tw {
   background-position: center -62px; }
 
+#video {
+  width: 175px;
+  height: 314px;
+  position: relative;
+  top: 94px;
+  left: 38px;
+  background-color: rgba(0, 0, 0, 0.5); }
+
 .content_cnt {
   overflow: hidden;
   position: relative;
@@ -434,6 +453,7 @@
   -webkit-transition: 2s ease;
   transition: 2s ease;
   position: absolute;
+  z-index: 2;
   right: 0px; }
   .nav li {
     vertical-align: top;
