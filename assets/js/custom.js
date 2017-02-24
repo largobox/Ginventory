@@ -142,8 +142,7 @@ function state0(){
 		})
 
 		$('.bottle').css({
-			'top': '-50px',
-			'height': '100%',
+			'top': '-50px'
 		})
 
 		$('.branch_1').css({
@@ -254,8 +253,7 @@ function state1(){
 		})
 
 		$('.bottle').css({
-			'top': '0px',
-			'height': 'calc(100% - 110px)'
+			'top': '-20px',
 		})
 
 		$('.branch_1').css({
