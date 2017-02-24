@@ -253,7 +253,7 @@ function state1(){
 		})
 
 		$('.bottle').css({
-			'top': '-20px',
+			'top': '-20px'
 		})
 
 		$('.branch_1').css({
