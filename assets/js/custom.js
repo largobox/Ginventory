@@ -157,12 +157,12 @@ function state0(){
 		})	
 
 		$('.branch_3').css({
-			'top': '0px',
-			'left': 'calc(50% - 160px)'
+			'top': '170px',
+			'left': 'calc(50% - 370px)'
 		})
 
 		$('.branch_4').css({
-			'top': '-550px',
+			'top': '-90px',
 			'left': 'calc(50% + 40px)'
 		})
 
@@ -269,12 +269,12 @@ function state1(){
 		})
 
 		$('.branch_3').css({
-			'top': '-10px',
-			'left': 'calc(50% - 140px)'
+			'top': '160px',
+			'left': 'calc(50% - 350px)'
 		})
 
 		$('.branch_4').css({
-			'top': '-540px',
+			'top': '-80px',
 			'left': 'calc(50% + 20px)'
 		})
 
